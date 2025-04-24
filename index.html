@@ -9,6 +9,55 @@
     <title>MOHAMMAD ALI</title>
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
 	<link rel="stylesheet" href="assets/css/steller.css">
+    <style>
+        .certificate-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.certificate-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.certificate-card {
+  margin: 20px;
+  width: 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.certificate-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.certificate-card img.animate {
+  opacity: 1;
+  transform: scale(1);
+}
+.certificate-card:nth-child(1) img {
+  transition-delay: 0.2s;
+}
+
+.certificate-card:nth-child(2) img {
+  transition-delay: 0.4s;
+}
+
+.certificate-card:nth-child(3) img {
+  transition-delay: 0.6s;
+}
+
+.certificate-card:nth-child(4) img {
+  transition-delay: 0.8s;
+}
+
+    </style>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
@@ -269,7 +318,23 @@
         </div>
     </section>
     <!-- End of portfolio section -->
-     
+    <div class="certificate-section">
+        <h2>Certificates</h2>
+        <div class="certificate-container">
+          <div class="certificate-card">
+            <img src="./assets/imgs/certificate1.jpeg" alt="Certificate 1">
+          </div>
+          <div class="certificate-card">
+            <img src="./assets/imgs/certificate2.jpeg" alt="Certificate 2">
+          </div>
+          <div class="certificate-card">
+            <img src="./assets/imgs/certificate3.JPG" alt="Certificate 3">
+          </div>
+          <div class="certificate-card">
+            <img src="./assets/imgs/certificate4.JPG" alt="Certificate 4">
+          </div>
+        </div>
+      </div>
     <!-- Hire me section -->
     <section class="bg-gray p-0 section">
         <div class="container">

@@ -13,10 +13,10 @@
 */
 
 // smooth scroll
-$(document).ready(function(){
-	$(".nav-link").on('click', function(event) {
+$(document).ready(function () {
+	$(".nav-link").on('click', function (event) {
 
-    	if (this.hash !== "") {
+		if (this.hash !== "") {
 
 			event.preventDefault();
 
@@ -24,9 +24,19 @@ $(document).ready(function(){
 
 			$('html, body').animate({
 				scrollTop: $(hash).offset().top
-			}, 700, function(){
+			}, 700, function () {
 				window.location.hash = hash;
 			});
-      	} 
-    });
+		}
+	});
+});
+const certificateImages = document.querySelectorAll('.certificate-card img');
+
+window.addEventListener('scroll', () => {
+	certificateImages.forEach((image) => {
+		const rect = image.getBoundingClientRect();
+		if (rect.top < window.innerHeight) {
+			image.classList.add('animate');
+		}
+	});
 });
